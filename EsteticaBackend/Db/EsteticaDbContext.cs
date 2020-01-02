@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EsteticaBackend.Db.Configurations;
+using EsteticaBackend.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EsteticaBackend.Db
@@ -14,10 +16,17 @@ namespace EsteticaBackend.Db
         }
 
         //DbSets
+        public DbSet<Profissional> Profissionais { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Configurations
+            modelBuilder.ApplyConfiguration(new PessoaConfiguration());
+            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new ProfissionalConfiguration());
         }
+
+        
     }
 }
