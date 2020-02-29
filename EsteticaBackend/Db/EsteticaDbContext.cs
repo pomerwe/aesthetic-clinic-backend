@@ -18,6 +18,9 @@ namespace EsteticaBackend.Db
         //DbSets
         public DbSet<Profissional> Profissionais { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Atendimento> Atendimentos { get; set; }
+
+        public DbSet<Procedimento> Procedimentos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,6 +28,8 @@ namespace EsteticaBackend.Db
             modelBuilder.ApplyConfiguration(new PessoaConfiguration());
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
             modelBuilder.ApplyConfiguration(new ProfissionalConfiguration());
+            modelBuilder.ApplyConfiguration(new ProcedimentoConfiguration());
+            modelBuilder.ApplyConfiguration(new AtendimentoConfiguration());
         }
 
         
