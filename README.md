@@ -1,4 +1,4 @@
-# 💆 Aesthetic Clinic Backend API
+# 💆 Beauty Clinic Backend API
 
 This is a backend project developed using **.NET Core**, designed to support the management needs of an **aesthetic clinic**.  
 It provides a RESTful API to handle clients, appointments, services, professionals, and more.
